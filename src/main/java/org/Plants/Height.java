@@ -12,7 +12,6 @@ public enum Height {
 
 
     private String height;
-    private String count;
 
     Height(String height) {
         this.height = height;
@@ -39,18 +38,18 @@ public enum Height {
         return this;
     }
 
-    public Height lastIndex() {
-
-        if (this.ordinal() == Height.BLOSSOMED.ordinal()) {
-            return this;
-        }
-        var temp = Height.values();
-
-        int i = 0;
-        for (; i < temp.length; ++i) {
-        }
-        return temp[i - 1];
-    }
+//    public Height lastIndex() {
+//
+//        if (this.ordinal() == Height.BLOSSOMED.ordinal()) {
+//            return this;
+//        }
+//        var temp = Height.values();
+//
+//        int i = 0;
+//        for (; i < temp.length; ++i) {
+//        }
+//        return temp[i - 1];
+//    }
 
     @Override
     public String toString() {

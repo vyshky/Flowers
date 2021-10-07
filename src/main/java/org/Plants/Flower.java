@@ -40,6 +40,10 @@ public final class Flower extends Plant {
         return flowerName;
     }
 
+    public int getDayToBloom() {
+        return dayToBloom;
+    }
+
     // Поливаем flower , и flower растет
     public void toWaterFlower() {
         if (hungerLevel >= 10) {
@@ -59,19 +63,15 @@ public final class Flower extends Plant {
     }
 
     //Округляем дату до дня цветения, что бы не выводить лишние дни
-    public int roundUpTheDate(int daysToBloom) {
+    private int roundUpTheDate(int daysToBloom) {
 
-        var experienceDay = (daysToBloom / height.count()); // получаем количество дней после которого растение будет выростать на один уровень
+        var experienceDay = (daysToBloom / height.count()); // получаем количество дней после которого растение будет вырастать на один уровень
 
         var countExperienceDays = daysToBloom / experienceDay;  // считаем количество повышения уровня за daysToBloom дней
 
         var dayMaxLevel = experienceDay * countExperienceDays;  // записываем последний день в который будет повышение уровня
 
         return dayMaxLevel;
-    }
-
-    public int getDayToBloom() {
-        return dayToBloom;
     }
 
     public void nextDay() {
@@ -83,8 +83,5 @@ public final class Flower extends Plant {
             height = height.nextIndex();
             System.out.print(flowerName + " " + height + " ");
         }
-
     }
-
-
 }

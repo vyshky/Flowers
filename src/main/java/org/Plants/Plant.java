@@ -1,19 +1,19 @@
 package org.Plants;
 
 public abstract class Plant {
-    public boolean stem;
-    public boolean leaf;
-    public boolean root;
-    public String plantBreathes;
-    public String drinkWater;
-    public String plantConsumesSolarEnergy;
+    private boolean stem;
+    private boolean leaf;
+    private boolean root;
+    private String plantBreathes;
+    private String drink;
+    private String plantConsumesSolarEnergy;
 
     public Plant() {
         stem = true;
         leaf = true;
         root = true;
         plantBreathes = "Углекислый газ";
-        drinkWater = "Вода";
+        drink = "Вода";
         plantConsumesSolarEnergy = "Солнечный свет";
     }
 }
