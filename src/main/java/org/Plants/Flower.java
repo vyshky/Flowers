@@ -61,7 +61,7 @@ public final class Flower extends Plant {
     //Округляем дату до дня цветения, что бы не выводить лишние дни
     public int roundUpTheDate(int daysToBloom) {
 
-        var experienceDay = (daysToBloom / height.count()); // получаем количество дней после которого растение будет выростать на один уровень
+        var experienceDay = (daysToBloom / height.count()); // получаем количество дней после которого растение будет вырастать на один уровень
 
         var countExperienceDays = daysToBloom / experienceDay;  // считаем количество повышения уровня за daysToBloom дней
 
