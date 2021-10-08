@@ -16,4 +16,13 @@ public abstract class Plant {
         drink = "Вода";
         plantConsumesSolarEnergy = "Солнечный свет";
     }
+
+    public Plant(boolean stem, boolean leaf, boolean root, String plantBreathes, String drink, String plantConsumesSolarEnergy) {
+        this.stem = stem;
+        this.leaf = leaf;
+        this.root = root;
+        this.plantBreathes = plantBreathes;
+        this.drink = drink;
+        this.plantConsumesSolarEnergy = plantConsumesSolarEnergy;
+    }
 }
