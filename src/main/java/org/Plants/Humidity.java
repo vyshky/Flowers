@@ -3,7 +3,7 @@ package org.Plants;
 public enum Humidity {
     HYDATOPHYTES("Гидатофит"),
     HYDROPHYTE("Гидрофит"),
-    HYGROPHYTE("Гидрофит"),
+    HYGROPHYTE("Гигрофит"),
     MESOPHYTE("Мезофит"),
     SUCCULENT("Суккулент"),
     XEROPHILE("Ксерофит");
@@ -29,7 +29,9 @@ public enum Humidity {
             temp = Humidity.valueOf("SUCCULENT");
         } else if (humidity >= 10 && humidity <= 30) {
             temp = Humidity.valueOf("XEROPHILE");
-        } else if (true) {
+        } else if (humidity > 100) {
+            throw new Exception("Растение отсырело");
+        } else {
             throw new Exception("Растение засохло");
         }
         return temp;

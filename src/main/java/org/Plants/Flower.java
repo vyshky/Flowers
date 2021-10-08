@@ -26,7 +26,10 @@ public final class Flower extends Plant {
         this.dayLevelUp = initLevelUpDay(daysToBloom);
     }
 
-    public Humidity getMoistureGgroup(){return MoistureGgroup;}
+    public Humidity getMoistureGgroup() {
+        return MoistureGgroup;
+    }
+
     public String getColorPot() {
         return pot.getColorPot();
     }
@@ -74,13 +77,12 @@ public final class Flower extends Plant {
     public void nextDay() {
         ++daysFromLanding;
         if (daysFromLanding == dayLevelUp) {
-            System.out.print(flowerName + " " + height + " ");
+            System.out.print(flowerName + " " + height + ", ");
         } else if (daysFromLanding % dayLevelUp == 0 && daysFromLanding != 0) {
             height = height.nextIndex();
             System.out.print(flowerName + " " + height + ", ");
         }
         hungerLevel += 10;
-        InfoHunger();
     }
 
     public boolean flowerIsHungry() {
@@ -90,7 +92,7 @@ public final class Flower extends Plant {
     public void InfoHunger() {
         var needWater = flowerIsHungry();
         if (needWater) {
-            System.out.println("Уровень голода : " + hungerLevel);
-        } else System.out.println();
+            System.out.print("Уровень голода : " + hungerLevel + " ");
+        }
     }
 }
