@@ -1,4 +1,4 @@
-package org.Plants;
+package org;
 
 public enum Colors {
     RED("красный"),

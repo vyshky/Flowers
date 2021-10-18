@@ -1,6 +1,4 @@
-package org.Plants;
-
-import java.util.Arrays;
+package org;
 
 public enum Height {
     VERY_SMALL("очень маленькая"),
@@ -18,7 +16,6 @@ public enum Height {
     }
 
     public int count() {
-
         var temp = Height.values();
         return temp.length;
     }
