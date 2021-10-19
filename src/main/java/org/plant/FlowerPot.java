@@ -14,14 +14,6 @@ public final class FlowerPot {
         this.plant = plant;
     }
 
-    @Override
-    public String toString() {
-        return "FlowerPot{" +
-                "color='" + color + '\'' +
-                ", plant=" + plant +
-                '}';
-    }
-
     public String getMoistureGroup() {
         return plant.getMoistureGroup();
     }
@@ -34,9 +26,18 @@ public final class FlowerPot {
     }
 
     public void addPlant(Plant plant) throws Exception {
-        if (this.plant != null && plant == null)
+        if (plant == null) throw new NullPointerException("Нельзя посадить Null в горшок");
+        if (this.plant == plant) return;
+        if (this.plant != null)
             throw new Exception("В горше уже есть растение!  Вы  не можете посадить другое растение");
         this.plant = plant;
     }
 
+    @Override
+    public String toString() {
+        return "FlowerPot{" +
+                "color='" + color + '\'' +
+                ", plant=" + plant +
+                '}';
+    }
 }

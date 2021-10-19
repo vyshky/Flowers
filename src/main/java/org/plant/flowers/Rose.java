@@ -17,12 +17,6 @@ public final class Rose extends Plant {
         this.moistureGroup = moistureGroup;
     }
 
-
-    public Plant Copy(Plant plant) {
-        var temp = new Rose(plant.getName(), plant.isStem(), plant.isLeaf(), plant.isRoot(), plant.getPlantBreathes(), plant.getDrink(), plant.getPlantConsumesEnergy(), plant.getHeight(), plant.getHumidity());
-        return temp;
-    }
-
     @Override
     public Humidity getHumidity() {
         return moistureGroup;
