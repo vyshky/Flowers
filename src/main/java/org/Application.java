@@ -16,6 +16,12 @@ public class Application {
         System.out.println(potGreenRose);
         NextDay nextDay = new NextDay(potGreenRose);
 
+        // Пересадка розы
+        Rose rose2 = (Rose) potGreenRose.getPlant();
+        FlowerPot potRedRose = new FlowerPot(Colors.RED, rose2);
+        System.out.println(potGreenRose);
+        System.out.println(potRedRose);
+
         nextDay.nextDay();
         nextDay.nextDay();
         nextDay.nextDay();
