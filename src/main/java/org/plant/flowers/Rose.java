@@ -1,29 +1,44 @@
 package org.plant.flowers;
 
 import org.Height;
-import org.Humidity;
+import org.plant.Humidity;
 import org.plant.Plant;
 
 public final class Rose extends Plant {
     private final Humidity moistureGroup;
-    private Height height;
 
-    public Rose(String flowerName, Humidity moistureGroup, Height height) {
+    public Rose(String flowerName, Humidity moistureGroup) {
         super(flowerName);
         this.moistureGroup = moistureGroup;
-        this.height = height;
+    }
+
+    public Rose(String name, boolean stem, boolean leaf, boolean root, String plantBreathes, String drink, String plantConsumesSolarEnergy, Height height, Humidity moistureGroup) {
+        super(name, stem, leaf, root, plantBreathes, drink, plantConsumesSolarEnergy, height);
+        this.moistureGroup = moistureGroup;
+    }
+
+
+    public Plant Copy(Plant plant) {
+        var temp = new Rose(plant.getName(), plant.isStem(), plant.isLeaf(), plant.isRoot(), plant.getPlantBreathes(), plant.getDrink(), plant.getPlantConsumesEnergy(), plant.getHeight(), plant.getHumidity());
+        return temp;
     }
 
     @Override
-    public String toString() {
-        return "Rose{" + "name=" + this.getName() +
-                ", moistureGroup=" + moistureGroup +
-                ", height=" + height +
-                '}';
+    public Humidity getHumidity() {
+        return moistureGroup;
     }
 
     @Override
     public String getMoistureGroup() {
         return moistureGroup.toString();
     }
+
+    @Override
+    public String toString() {
+        return "Rose{" + "name=" + this.getName() +
+                ", moistureGroup=" + moistureGroup +
+                '}';
+    }
+
+
 }

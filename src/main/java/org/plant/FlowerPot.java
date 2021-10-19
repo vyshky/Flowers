@@ -3,7 +3,6 @@ package org.plant;
 import lombok.Getter;
 import lombok.ToString;
 import org.Colors;
-import org.plant.Plant;
 
 @Getter
 @ToString
@@ -19,7 +18,5 @@ public final class FlowerPot {
     public String getMoistureGroup() {
         return plant.getMoistureGroup();
     }
-    // Написать методы для пересадки растения Get вытащить растение Set посадить
-
 
 }

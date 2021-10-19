@@ -1,4 +1,4 @@
-package org;
+package org.plant;
 
 public enum Humidity {
     HYDATOPHYTES("Гидатофит"),

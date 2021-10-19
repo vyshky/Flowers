@@ -23,7 +23,9 @@ public abstract class Plant {
         plantBreathes = "Углекислый газ";
         drink = "Вода";
         plantConsumesEnergy = "Солнечный свет";
+        height = Height.VERY_SMALL;
     }
+
 
     public Plant(String name, boolean stem, boolean leaf, boolean root, String plantBreathes, String drink, String plantConsumesSolarEnergy, Height height) {
         this.name = name;
@@ -35,5 +37,9 @@ public abstract class Plant {
         this.plantConsumesEnergy = plantConsumesSolarEnergy;
         this.height = height;
     }
+
+    public abstract Humidity getHumidity();
+
     public abstract String getMoistureGroup();
+
 }
