@@ -3,13 +3,12 @@ package org;
 import org.nextDay.NextDay;
 import org.plant.FlowerPot;
 import org.plant.Humidity;
-import org.plant.Plant;
+import org.plant.flowers.MoonFlower;
 import org.plant.flowers.Rose;
 
 public class Application {
     public static void main(String[] args) throws Exception {
         int humidityLevel = 60;  // Уровень влажности воздуха
-
         /////////////////////////////////
         //Pot должен хранить в себе розу
         Rose rose = new Rose("Роза китайская", Humidity.getMoistureGgroup(humidityLevel));
@@ -31,12 +30,12 @@ public class Application {
 
 
         // Посадка пустого значения в горшок
-        Rose rose2 = null; // Ошибка : Нельзя посадить Null в горшок
-        potRed.addPlant(rose2);
+        // Rose rose2 = null; // Ошибка : Нельзя посадить Null в горшок
+        //potRed.addPlant(rose2);
 
         // Посадке в НЕ пустой горшок
-        Rose rose3 = new Rose("Роза дамасская", Humidity.getMoistureGgroup(humidityLevel));// Ошибка : В горше уже есть растение!  Вы  не можете посадить другое растение
-        potRed.addPlant(rose3);
+        //Rose rose3 = new Rose("Роза дамасская", Humidity.getMoistureGgroup(humidityLevel));// Ошибка : В горше уже есть растение!  Вы  не можете посадить другое растение
+        //potRed.addPlant(rose3);
 
 
         nextDay.nextDay();
@@ -55,5 +54,12 @@ public class Application {
         nextDay.pourTheWater();
         //nextDay.pourTheWater(); // Ошибка : Растение перекормили
 
+
+
+
+        //// Лунный цветок
+        MoonFlower moonFlower = new MoonFlower("Лунный цветок Энотера",  Humidity.getMoistureGgroup(30));
+        FlowerPot potMagent = new FlowerPot(Colors.MAGENT, moonFlower);
+        System.out.println(potMagent);
     }
 }

@@ -24,21 +24,6 @@ enum HungryPlant {
         var temp = HungryPlant.values();
         return temp.length;
     }
-
-//    public HungryPlant nextIndex() {
-//
-//        if (this.ordinal() == HungryPlant.VERY_HUNGRY.ordinal()) {
-//            return this;
-//        }
-//        var temp = HungryPlant.values();
-//
-//        for (int i = 0; i < temp.length; ++i) {
-//            if (temp[i].ordinal() == this.ordinal()) {
-//                return temp[++i];
-//            }
-//        }
-//        return this;
-//    }
 }
 
 @Getter

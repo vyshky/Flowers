@@ -7,31 +7,32 @@ import org.plant.Humidity;
 import org.plant.Plant;
 
 @Getter
-public final class Rose extends Plant {
+public class MoonFlower extends Plant {
     private final String name;
     private final Humidity moistureGroup;
-    private final Colors color = Colors.RED;
+    private final Colors color = Colors.YELLOW;
 
-    public Rose(String flowerName, Humidity moistureGroup) {
+    public MoonFlower(String MoonFlowerName, Humidity moistureGroup) {
         super();
-        this.name = flowerName;
+        this.name = MoonFlowerName;
         this.moistureGroup = moistureGroup;
     }
 
-    public Rose(String flowerName, boolean stem, boolean leaf, boolean root, String plantBreathes, String drink, String plantConsumesSolarEnergy, Height height, Humidity moistureGroup) {
+    public MoonFlower(String MoonFlowerName, boolean stem, boolean leaf, boolean root, String plantBreathes, String drink, String plantConsumesSolarEnergy, Height height, Humidity moistureGroup) {
         super(stem, leaf, root, plantBreathes, drink, plantConsumesSolarEnergy, height);
-        this.name = flowerName;
+        this.name = MoonFlowerName;
         this.moistureGroup = moistureGroup;
     }
+
 
     @Override
     public String getMoistureGroup() {
-        return moistureGroup.toString();
+        return null;
     }
 
     @Override
     public String toString() {
-        return "Rose{" +
+        return "MoonFlower{" +
                 "name='" + name + '\'' +
                 ", moistureGroup=" + moistureGroup +
                 ", color=" + color +

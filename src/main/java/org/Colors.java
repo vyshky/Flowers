@@ -2,6 +2,7 @@ package org;
 
 public enum Colors {
     RED("красный"),
+    YELLOW("желтый"),
     GREEN("зеленый"),
     BLACK("черный"),
     White("белый"),
